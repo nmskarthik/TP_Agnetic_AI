@@ -1,15 +1,6 @@
-import pytest
-from playwright.sync_api import expect, Page
-import logging
-import os
-
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
 
 @pytest.fixture(scope="function")
-def test_authenticated_page(page: Page) -> Page:
+def authenticated_page(page: Page) -> Page:
     # Navigate to login page
     page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
     
